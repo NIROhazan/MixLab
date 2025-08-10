@@ -1,0 +1,17 @@
+# MixLab DJ - Python Dependencies
+# Requires CMake (>=3.10) and Python (>=3.10) to build and run the project
+
+# Core numerical computing
+numpy>=1.20.0
+
+# GUI Framework
+PyQt6>=6.0.0
+
+# Audio file I/O
+soundfile>=0.12.0
+
+# Real-time audio processing and device access
+sounddevice>=0.4.0
+
+# Signal processing for equalizer and audio effects
+scipy>=1.7.0 
