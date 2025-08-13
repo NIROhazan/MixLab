@@ -6,7 +6,6 @@
 #include <unordered_map>
 #include "FFT_Processor.h"
 
-constexpr double PI = 3.14159265358979323846;
 
 /**
  * @brief Default constructor for BPM_Detector.
@@ -73,7 +72,7 @@ std::vector<float> BPM_Detector::detectOnsets(const std::vector<float> &samples,
             // Calculate magnitudes and spectral flux
             float flux = 0.0f;
             for (size_t i = 1; i <= windowSize / 2; i++)
-            { // Skip DC component
+            { // Skip DC component (the first one)
                 // Use frequency weighting to emphasize rhythm-relevant bands (100Hz-8kHz)
                 const float freq = static_cast<float>(i) * sampleRate / windowSize;
                 const float freqWeight = (freq > 100 && freq < 8000) ? 1.0f : 0.5f;
